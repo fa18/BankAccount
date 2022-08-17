@@ -2,16 +2,16 @@ package com.bank.accountservice.infrastructure.dto;
 
 public class TransferDTO {
 
-    private String IbanSource;
+    private String ibanSource;
 
-    private String IbanDestination;
+    private String ibanDestination;
 
-    private String Amount;
+    private String amount;
 
     public TransferDTO(String ibanSource, String ibanDestination, String amount) {
-        IbanSource = ibanSource;
-        IbanDestination = ibanDestination;
-        Amount = amount;
+        this.ibanSource = ibanSource;
+        this.ibanDestination = ibanDestination;
+        this.amount = amount;
     }
 
     public TransferDTO() {
@@ -19,14 +19,14 @@ public class TransferDTO {
     }
 
     public String getIbanSource() {
-        return IbanSource;
+        return ibanSource;
     }
 
     public String getIbanDestination() {
-        return IbanDestination;
+        return ibanDestination;
     }
 
     public String getAmount() {
-        return Amount;
+        return amount;
     }
 }

@@ -2,27 +2,27 @@ package com.bank.accountservice.domain.transfer.entity;
 
 public class Transfer {
 
-    private String IbanSource;
+    private String ibanSource;
 
-    private String IbanDestination;
+    private String ibanDestination;
 
-    private String Amount;
+    private String amount;
 
     public Transfer(String ibanSource, String ibanDestination, String amount) {
-        IbanSource = ibanSource;
-        IbanDestination = ibanDestination;
-        Amount = amount;
+        this.ibanSource = ibanSource;
+        this.ibanDestination = ibanDestination;
+        this.amount = amount;
     }
 
     public String getIbanSource() {
-        return IbanSource;
+        return ibanSource;
     }
 
     public String getIbanDestination() {
-        return IbanDestination;
+        return ibanDestination;
     }
 
     public String getAmount() {
-        return Amount;
+        return amount;
     }
 }

@@ -5,10 +5,7 @@ import com.bank.accountservice.domain.transfer.entity.Transfer;
 import com.bank.accountservice.infrastructure.dto.TransferDTO;
 import com.bank.accountservice.infrastructure.dto.TransferRequest;
 import com.bank.accountservice.infrastructure.mapper.TransferMapper;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/account")
@@ -27,7 +24,6 @@ public class TransferController {
             @RequestBody TransferRequest transferRequest
     ){
         Transfer transfer = transferApplication.transfer(transferRequest);
-        TransferDTO transferDTO = transferMapper.toDTO(transfer);
-        return transferDTO;
+        return transferMapper.toDTO(transfer);
     }
 }

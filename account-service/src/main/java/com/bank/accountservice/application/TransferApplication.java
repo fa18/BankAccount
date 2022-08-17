@@ -13,6 +13,6 @@ public class TransferApplication {
     }
 
     public Transfer transfer(TransferRequest transferRequest){
-        return transferAPI.transfer(transferRequest.getIbanSource(),transferRequest.getIbanDestination(),transferRequest.getAmount());
+        return transferAPI.transfer(transferRequest);
     }
 }
