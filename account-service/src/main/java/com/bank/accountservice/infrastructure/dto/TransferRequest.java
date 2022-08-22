@@ -1,18 +1,21 @@
 package com.bank.accountservice.infrastructure.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TransferRequest {
 
     @JsonProperty("iban_source")
     private String ibanSource;
 
-    @JsonProperty("iban_source")
+    @JsonProperty("iban_destination")
     private String ibanDestination;
 
-    @JsonProperty("aban_source")
     private String amount;
 
+    @JsonCreator
     public TransferRequest(String ibanSource, String ibanDestination, String amount) {
         this.ibanSource = ibanSource;
         this.ibanDestination = ibanDestination;

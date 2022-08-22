@@ -10,6 +10,6 @@ public class TransferProvider {
 
     //TODO: to complete
     public TransferDTO transfer(){
-        return new TransferDTO();
+        return new TransferDTO("test","test2","15");
     }
 }
