@@ -12,7 +12,7 @@ public class TransferApplication {
         this.transferAPI = transferAPI;
     }
 
-    public Transfer transfer(TransferRequest transferRequest){
-        return transferAPI.transfer(transferRequest);
+    public Transfer transfer(TransferRequest transferRequest,Integer contractId){
+        return transferAPI.transfer(transferRequest,contractId);
     }
 }

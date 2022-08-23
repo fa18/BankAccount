@@ -14,7 +14,7 @@ public class TransferApiImpl implements TransferAPI {
     }
 
     @Override
-    public Transfer transfer(TransferRequest transferRequest) {
-        return transferSPI.transfer(transferRequest);
+    public Transfer transfer(TransferRequest transferRequest,Integer contractId) {
+        return transferSPI.transfer(transferRequest,contractId);
     }
 }

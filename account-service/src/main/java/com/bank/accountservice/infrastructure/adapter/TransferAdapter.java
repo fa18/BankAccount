@@ -20,7 +20,7 @@ public class TransferAdapter implements TransferSPI {
     }
 
     @Override
-    public Transfer transfer(TransferRequest transferRequest) {
+    public Transfer transfer(TransferRequest transferRequest,Integer contractId) {
         TransferDTO transferDTO = transferProvider.transfer();
         return transferMapper.toDomain(transferDTO);
     }

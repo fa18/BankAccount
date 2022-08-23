@@ -5,5 +5,5 @@ import com.bank.accountservice.infrastructure.dto.TransferRequest;
 
 public interface TransferSPI {
 
-    Transfer transfer(TransferRequest transferRequest);
+    Transfer transfer(TransferRequest transferRequest,Integer contractId);
 }

@@ -19,11 +19,12 @@ public class TransferController {
         this.transferApplication = transferApplication;
     }
 
-    @PostMapping(path = "transfer")
+    @PostMapping(path = "{contract_id}/transfer")
     public TransferDTO transfer(
-            @RequestBody TransferRequest transferRequest
+            @RequestBody TransferRequest transferRequest,
+            @PathVariable(name = "contract_id") Integer contractId
     ){
-        Transfer transfer = transferApplication.transfer(transferRequest);
+        Transfer transfer = transferApplication.transfer(transferRequest,contractId);
         return transferMapper.toDTO(transfer);
     }
 }
